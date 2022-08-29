@@ -20,8 +20,6 @@ struct LandmarkList: View {
     
     var body: some View {
         NavigationView{
-            
-            
             List{
                 Toggle(isOn: $showFavoritesOnly) {
                     Text("Favorites only")
@@ -45,7 +43,7 @@ struct LandmarkList_Previews: PreviewProvider {
     
     static var previews: some View {
         LandmarkList()
-            .environmentObject(ModelData())
             .previewDevice("iPhone 13 Pro Max")
+            .environmentObject(ModelData())
     }
 }
