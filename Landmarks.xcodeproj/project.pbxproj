@@ -62,6 +62,7 @@
 		A24EFADE28BC4857006C8F20 /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		A24EFAE028BC4ABA006C8F20 /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
 		A24EFAE228BC5EC2006C8F20 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		A24EFAE628BC6511006C8F20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +113,7 @@
 		A209B35828BB30DF00A76406 /* Landmarks */ = {
 			isa = PBXGroup;
 			children = (
+				A24EFAE628BC6511006C8F20 /* Info.plist */,
 				A24EFAD928BC4222006C8F20 /* Resources */,
 				A209B35928BB30DF00A76406 /* LandmarksApp.swift */,
 				A24EFADA28BC423C006C8F20 /* Views */,
@@ -496,6 +498,7 @@
 				DEVELOPMENT_TEAM = ZHNLB28L5C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Landmarks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -525,6 +528,7 @@
 				DEVELOPMENT_TEAM = ZHNLB28L5C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Landmarks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

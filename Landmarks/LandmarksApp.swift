@@ -15,6 +15,9 @@ struct LandmarksApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(modelData)
+                .onOpenURL{url in
+                    print(url)
+                }
         }
     }
 }
