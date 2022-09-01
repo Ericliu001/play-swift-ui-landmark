@@ -6,18 +6,30 @@
 //
 import RxSwift
 import Foundation
-import RxRelay
 
 protocol NavNode {
-    func navigate(args: [String:String]) -> Completable
+    func navigate(url: URL?) -> Completable
     
-    func requestChild(child: NavNode.Type, args: [String:String]) -> Completable
+    func requestChild(child: NavNode.Type, url: URL?) -> Completable
     
-    func commands() -> BehaviorRelay<NavCommand>
+    func commands() -> Observable<NavCommand?>
     
     func sendEvent(event: NavEvent)
+    
 }
 
-struct NavCommand{}
 
-struct NavEvent{}
+struct NavCommand{
+    var destinationClass: NavNode.Type
+    var url: URL?
+}
+
+struct NavEvent{
+    var status: NavStatus = NavStatus.SUCCESS
+    var message: String = ""
+    
+    
+    enum NavStatus {
+        case SUCCESS, FAILURE
+    }
+}
