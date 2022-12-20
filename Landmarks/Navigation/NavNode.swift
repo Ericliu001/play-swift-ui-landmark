@@ -8,28 +8,15 @@ import RxSwift
 import Foundation
 
 protocol NavNode {
-    func navigate(url: URL?) -> Completable
+    associatedtype Arg
     
-    func requestChild(child: NavNode.Type, url: URL?) -> Completable
+    associatedtype ParentHandler: NavHandler
     
-    func commands() -> Observable<NavCommand?>
+    associatedtype CurrentHandler: NavHandler
     
-    func sendEvent(event: NavEvent)
+    func bind(_ currentHandler: CurrentHandler)
     
-}
-
-
-struct NavCommand{
-    var destinationClass: NavNode.Type
-    var url: URL?
-}
-
-struct NavEvent{
-    var status: NavStatus = NavStatus.SUCCESS
-    var message: String = ""
+    func getCurrentHandler() -> CurrentHandler?
     
-    
-    enum NavStatus {
-        case SUCCESS, FAILURE
-    }
+    func navigate() -> (ParentHandler) -> Completable
 }
