@@ -18,5 +18,5 @@ protocol NavNode {
     
     func getCurrentHandler() -> CurrentHandler?
     
-    func navigate() -> (ParentHandler) -> Completable
+    func navigateInternal() -> Completable
 }
